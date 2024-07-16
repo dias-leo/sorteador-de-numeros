@@ -4,7 +4,12 @@ function sortear() {
     let ate = parseInt(document.getElementById('ate').value);
     if (de >= ate) {
         alert('Campo "do número" deve ser inferior ao campo "até o número". Verifique! :)');
-        reiniciar()
+        return;
+    }
+
+    if (quantidade > (de - ate +1)) {
+        alert('campo "quantidade" deve ser maior ou igual ao intervalo informado no campo "do número" até o campo "até o número". Verifique! :)');
+        return;
     }
     
     let sorteados = [];
